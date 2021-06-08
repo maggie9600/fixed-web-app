@@ -1,0 +1,32 @@
+SQL injection:
+This vulnerability is easy to fix as it was present in input field for email, so validating
+proper email will fix this vulnerability.
+
+Reflected XSS:
+This is also similar to SQL injection vulnerability's fix. As sanitising the inputs will
+eventually fix this vulnerability along with other vulnerabilites.
+
+Command injection:
+Getting only numbers as a input to prevent user from injecting commands, also those inputs
+are individually checked for any malicious injection.
+
+Open URL redirection:
+It is fixed by giving a default input and preventing the parameter to get input from user.
+By this method we can prevent open URL redirection vulnerability.
+
+Stored XSS:
+It was due to getting all HTML special characters as it is, so now those special characters
+are encoded and stored so as to prevent stored XSS.
+
+IDOR:
+IDOR generally is a high risk vulnerability, when it is present in password reset page
+it is super risky and needs to be fixed as quick as possible. This was fixed by adding
+additional parameter for validating along with a new table to store the validation key
+so as to prevent tampering of users table.
+
+PHP injection:
+This was due to validations, and that was not needed to the web app. so removal of it 
+made the job easy and fixed the vulnerability of PHP injection.
+
+Security misconfiguration(Leaving configuration page enabled):
+This was fixed by removing the configuration page.
